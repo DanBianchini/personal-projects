@@ -1,5 +1,14 @@
 package minesweeper;
 
+/*
+ * Full credit to Jan Bodnar for the minesweeper game code itself
+ * Link to her website explaining everything in the program: http://zetcode.com/tutorials/javagamestutorial/minesweeper/
+ * 
+ * I made the "MineMan" class in Board.java
+ * this is the class that solves the game
+ * I also made some slight alterations to Jan's code to make it suitable for a CPU to play
+ */
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
