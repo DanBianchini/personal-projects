@@ -4,9 +4,9 @@ package minesweeper;
  * Full credit to Jan Bodnar for the minesweeper game code itself
  * Link to her website explaining everything in the program: http://zetcode.com/tutorials/javagamestutorial/minesweeper/
  * 
- * I made the "MineMan" class
+ * MineMan class written by Dan Bianchini
  * this is the class that solves the game
- * I also made some slight alterations to Jan's code to make it suitable for a CPU to play
+ * also made some slight alterations to Jan's code to make it suitable for a CPU to play
  */
 
 import java.awt.Dimension;
@@ -399,6 +399,8 @@ public class Board extends JPanel {
     	
     	private void mark(int x, int y) {
     		field[y * N_COLS + x] += MARK_FOR_CELL;
+    		minesLeft--;
+    		statusbar.setText(Integer.toString(minesLeft));
     		repaint();
     	}
     	
@@ -686,7 +688,7 @@ public class Board extends JPanel {
 						Thread.sleep(interval);
 					}
 				}
-				Thread.sleep(3000);
+				Thread.sleep(1500);
 	    		newGame();
 	    		repaint();
     		}
