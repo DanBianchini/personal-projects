@@ -66,7 +66,7 @@ void create_tests(int width, int height) {
 			// gradient
 			double xscale = 256.0 / (double)width;
 			double yscale = 256.0 / (double)height;
-			gradient << "0 " << x * xscale << ' ' << y * yscale << endl;
+			gradient << "0 " << int(x * xscale) << ' ' << int(y * yscale) << endl;
 		}
 	}
 	grid.close();
